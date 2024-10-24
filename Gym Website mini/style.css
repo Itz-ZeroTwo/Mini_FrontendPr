@@ -1,0 +1,345 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+    scroll-behavior: smooth;
+}
+
+/* Header Styling */
+header {
+    background: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+header h1 {
+    margin: 0;
+    animation: fadeInDown 1.5s ease-in-out;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #ff6347;
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* Tittle bar styling */
+
+/* Header Styling */
+
+header h1 {
+    font-size: 3.5em; /* Increase the size of the headline */
+    margin: 0;
+    background: linear-gradient(90deg, #ff6347, #ffdd00); /* Gradient color */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3); /* Text shadow for a 3D effect */
+    animation: gradientShift 5s ease-in-out infinite;
+}
+
+/* Animations */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+
+
+/* Section Styling */
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+section {
+    padding: 60px 0;
+    opacity: 0;
+    animation: fadeIn 1.5s forwards;
+}
+
+/* About Us Section Styling */
+#about {
+    background: linear-gradient(135deg, #ffffff 50%, #f4f4f4 50%);
+    padding: 80px 20px;
+    text-align: center;
+}
+
+#about h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+}
+
+#about h2::after {
+    content: '';
+    width: 50px;
+    height: 4px;
+    background: #ff6347;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5px;
+}
+
+#about p {
+    font-size: 1.2em;
+    max-width: 700px;
+    margin: 0 auto 40px;
+    line-height: 1.8;
+    color: #666;
+}
+
+.about-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.about-icon-box {
+    background: #fff;
+    border-radius: 10px;
+    padding: 30px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-icon-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.about-icon {
+    font-size: 3em;
+    color: #ff6347;
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
+}
+
+.about-icon-box:hover .about-icon {
+    color: #e5533c;
+}
+
+.about-icon-box h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    color: #333;
+}
+
+.about-icon-box p {
+    font-size: 1em;
+    color: #666;
+    line-height: 1.6;
+}
+
+
+
+
+#home {
+    background: url('gym.jpg') no-repeat center center/cover;
+    background-color: rgba(0, 0, 0, 0.6); /* Fallback color */
+    color: #fff;
+    text-align: center;
+    padding: 150px 0;
+    opacity: 1; /* Ensure visibility */
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+#home h2 {
+    font-size: 2.5em;
+    animation: fadeInDown 1.5s ease-in-out;
+}
+
+#home p {
+    font-size: 1.2em;
+    margin: 20px 0;
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    color: #fff;
+    background-color: #ff6347;
+    text-decoration: none;
+    border-radius: 5px;
+    transform: scale(1);
+    transition: transform 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #e5533c;
+    transform: scale(1.1);
+}
+
+/* About, Services, Trainers, and Contact Section */
+#about, #services, #trainers, #contact {
+    background-color: #fff;
+    color: #333;
+    text-align: center;
+}
+
+.service-box, .trainer-box {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    animation: fadeIn 1.5s forwards;
+    animation-delay: 0.5s;
+}
+
+.service-box:hover, .trainer-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.service-box h3, .trainer-box h3 {
+    margin-bottom: 15px;
+}
+
+.trainer-box img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+/* Contact Form */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    animation: fadeIn 1.5s forwards;
+    animation-delay: 1s;
+}
+
+form input, form textarea {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: box-shadow 0.3s ease;
+}
+
+form input:focus, form textarea:focus {
+    box-shadow: 0 0 5px rgba(255, 99, 71, 0.5);
+}
+
+form button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #ff6347;
+    color: #fff;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+form button:hover {
+    background-color: #e5533c;
+    transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 40px;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
