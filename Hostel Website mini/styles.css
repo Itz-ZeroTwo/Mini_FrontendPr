@@ -1,0 +1,249 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f5f5f5;
+  }
+  
+  /* Navbar */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #1e1e2f;
+  }
+  
+  .navbar .logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #fff;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+  }
+  
+  .nav-links li {
+    margin-left: 20px;
+  }
+  
+  .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  .nav-links a:hover {
+    color: #fca311;
+  }
+  
+  /* Sign In / Log In */
+  .auth-links a {
+    margin-left: 15px;
+    color: #fca311;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+  }
+  
+  .auth-links a:hover {
+    color: #fff;
+  }
+  
+  /* Hero Section */
+  .hero {
+    background-image: url('hero.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    position: relative;
+    text-align: center;
+  }
+  
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .hero h1 {
+    font-size: 3.5em;
+    margin-bottom: 0.3em;
+  }
+  
+  .hero p {
+    font-size: 1.2em;
+    margin-bottom: 1em;
+  }
+  
+  .cta-button {
+    padding: 10px 20px;
+    background-color: #fca311;
+    color: #1e1e2f;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .cta-button:hover {
+    background-color: #e07a27;
+    transform: scale(1.05);
+  }
+  
+  /* About Us Section */
+  .about {
+    padding: 50px;
+    text-align: center;
+    animation: fadeIn 1s ease-in;
+  }
+  
+  .about h2 {
+    margin-bottom: 20px;
+  }
+  
+  /* Rooms Section */
+  .rooms {
+    padding: 50px;
+    text-align: center;
+    background-color: #e0e0e0;
+  }
+  
+  .room-option {
+    margin: 20px;
+    padding: 20px;
+    border: 2px solid #fca311;
+    border-radius: 8px;
+    transition: transform 0.3s;
+  }
+  
+  .room-option:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Facilities Section */
+  .facilities {
+    padding: 50px;
+    text-align: center;
+  }
+  
+  .facility {
+    margin: 20px;
+    padding: 15px;
+    border: 1px solid #1e1e2f;
+    border-radius: 8px;
+    display: inline-block;
+    transition: background-color 0.3s;
+  }
+  
+  .facility:hover {
+    background-color: #fca311;
+  }
+  
+/* Gallery Section */
+.gallery {
+    padding: 50px;
+    text-align: center;
+  }
+  
+  .gallery h2 {
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #1e1e2f;
+  }
+  
+  .gallery-images {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .gallery-image {
+    width: 200px;
+    height: 150px;
+    overflow: hidden;
+    border-radius: 8px;
+  }
+  
+  .gallery-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+  }
+  
+  .gallery-image:hover img {
+    transform: scale(1.1);
+  }
+  
+  
+  
+  /* Contact Section */
+  .contact {
+    padding: 50px;
+    text-align: center;
+    background-color: #e0e0e0;
+  }
+  
+  .contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .contact input, .contact textarea {
+    margin: 10px;
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #1e1e2f;
+    border-radius: 5px;
+  }
+  
+  .contact button {
+    padding: 10px 20px;
+    background-color: #fca311;
+    border: none;
+    color: #1e1e2f;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .contact button:hover {
+    background-color: #e07a27;
+  }
+  
+  /* Fade In Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
